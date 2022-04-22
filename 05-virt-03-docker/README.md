@@ -38,6 +38,46 @@ Status: Downloaded newer image for nginx:latest
 docker.io/library/nginx:latest
 vagrant@server1:~$
 ```
+  * Dockerfile
+```shell
+FROM nginx:latest
+RUN rm -fv /usr/share/nginx/html/index.html && \
+touch /usr/share/nginx/html/index.html && \
+echo '<html> \
+<head> \
+Hey, Netology \
+</head> \
+<body> \
+<h1>I’m DevOps Engineer!</h1> \
+</body> \
+</html>' > /usr/share/nginx/html/index.html
+
+```
+  * Сборка
+```shell
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/nginx$ sudo docker build -t rowhe/nginx:1.21.6 .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM nginx:latest
+ ---> fa5269854a5e
+Step 2/2 : RUN rm -fv /usr/share/nginx/html/index.html && touch /usr/share/nginx/html/index.html && echo '<html> <head> Hey, Netology </head> <body> <h1>I’m DevOps Engineer!</h1> </body> </html>' > /usr/share/nginx/html/index.html
+ ---> Running in 2c328dee19d5
+removed '/usr/share/nginx/html/index.html'
+Removing intermediate container 2c328dee19d5
+ ---> 54c071d93d68
+Successfully built 54c071d93d68
+Successfully tagged rowhe/nginx:1.21.6
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/nginx$ sudo docker run --name my_nginx -d -p 80:80 rowhe/nginx:1.21.6
+4c708c7864b0a19a4ca95375d1b341af5d1746e8666e798b7ca2f9fc9a0c06dc
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/nginx$ curl localhost:80
+<html> <head> Hey, Netology </head> <body> <h1>I’m DevOps Engineer!</h1> </body> </html>
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/nginx$
+```
+  * Запуск контейнера
+```shell
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/nginx$ sudo docker run --name my_nginx -d -p 80:80 rowhe/nginx:1.21.6
+4c708c7864b0a19a4ca95375d1b341af5d1746e8666e798b7ca2f9fc9a0c06dc
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/nginx$ 
+```
 - реализуйте функциональность:
 запуск веб-сервера в фоне с индекс-страницей, содержащей HTML-код ниже:
 ```
@@ -50,7 +90,15 @@ Hey, Netology
 </body>
 </html>
 ```
+  * Проверка работы
+```shell
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/nginx$ curl localhost:80
+<html> <head> Hey, Netology </head> <body> <h1>I’m DevOps Engineer!</h1> </body> </html>
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/nginx$ 
+```
+
 Опубликуйте созданный форк в своем репозитории и предоставьте ответ в виде ссылки на https://hub.docker.com/username_repo.
+  * Ссылка на [репозиторий](https://hub.docker.com/repository/docker/rowhe/nginx) Nginx
 
 ## Задача 2
 
@@ -58,19 +106,27 @@ Hey, Netology
 "Подходит ли в этом сценарии использование Docker контейнеров или лучше подойдет виртуальная машина, физическая машина? Может быть возможны разные варианты?"
 
 Детально опишите и обоснуйте свой выбор.
-
 --
 
 Сценарий:
 
 - Высоконагруженное монолитное java веб-приложение;
+  
 - Nodejs веб-приложение;
+  * Контейнер
 - Мобильное приложение c версиями для Android и iOS;
+  * Контейнер
 - Шина данных на базе Apache Kafka;
+  * Контейнер
 - Elasticsearch кластер для реализации логирования продуктивного веб-приложения - три ноды elasticsearch, два logstash и две ноды kibana;
+  * Контейнер
 - Мониторинг-стек на базе Prometheus и Grafana;
+  * Контейнер
 - MongoDB, как основное хранилище данных для java-приложения;
+  * Отдельный хост или виртуальная машина
 - Gitlab сервер для реализации CI/CD процессов и приватный (закрытый) Docker Registry.
+  * Виртуальная машина
+  * P.S. К сожалению с этими сервисами пока не работал и могу лишь примерно представлять в каком случае лучше использовать контейнер, а в каком виртуальный или физический сервер.
 
 ## Задача 3
 

@@ -18,8 +18,26 @@
 Сценарий выполения задачи:
 
 - создайте свой репозиторий на https://hub.docker.com;
+  * ![DockerHub](img/DockerHub.png)
 - выберете любой образ, который содержит веб-сервер Nginx;
+  * ![Nginx](img/nginx.png)
 - создайте свой fork образа;
+```shell
+vagrant@server1:~$ docker pull nginx
+Using default tag: latest
+latest: Pulling from library/nginx
+1fe172e4850f: Download complete
+1fe172e4850f: Pull complete
+35c195f487df: Pull complete
+213b9b16f495: Pull complete
+a8172d9e19b9: Pull complete
+f5eee2cb2150: Pull complete
+93e404ba8667: Pull complete
+Digest: sha256:6d701d83f2a1bb99efb7e6a60a1e4ba6c495bc5106c91709b0560d13a9bf8fb6
+Status: Downloaded newer image for nginx:latest
+docker.io/library/nginx:latest
+vagrant@server1:~$
+```
 - реализуйте функциональность:
 запуск веб-сервера в фоне с индекс-страницей, содержащей HTML-код ниже:
 ```

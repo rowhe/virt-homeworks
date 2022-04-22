@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="Дз 5.3 начало">
-      <change beforePath="$PROJECT_DIR$/05-virt-02-iaac/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/05-virt-02-iaac/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-virt-03-docker/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/05-virt-03-docker/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +32,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="virt-11" />
-                    <option name="lastUsedInstant" value="1650482983" />
+                    <option name="lastUsedInstant" value="1650483037" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="virt_hw1-4" />
@@ -63,6 +64,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="Python" />
     <property name="full.screen.before.presentation.mode" value="false" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -81,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650381403891</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Дз 5.3 начало">
+      <created>1650483150110</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650483150110</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,7 +98,34 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="virt-11" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="virt-11" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>

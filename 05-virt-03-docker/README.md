@@ -111,7 +111,7 @@ dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/nginx$
 Сценарий:
 
 - Высоконагруженное монолитное java веб-приложение;
-  
+  * Контейнер
 - Nodejs веб-приложение;
   * Контейнер
 - Мобильное приложение c версиями для Android и iOS;
@@ -123,7 +123,7 @@ dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/nginx$
 - Мониторинг-стек на базе Prometheus и Grafana;
   * Контейнер
 - MongoDB, как основное хранилище данных для java-приложения;
-  * Отдельный хост или виртуальная машина
+  * Отдельный физический сервер или виртуальная машина
 - Gitlab сервер для реализации CI/CD процессов и приватный (закрытый) Docker Registry.
   * Виртуальная машина
   * P.S. К сожалению с этими сервисами пока не работал и могу лишь примерно представлять в каком случае лучше использовать контейнер, а в каком виртуальный или физический сервер.
@@ -131,16 +131,53 @@ dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/nginx$
 ## Задача 3
 
 - Запустите первый контейнер из образа ***centos*** c любым тэгом в фоновом режиме, подключив папку ```/data``` из текущей рабочей директории на хостовой машине в ```/data``` контейнера;
+```shell
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/debian$ sudo docker run -v /home/dpopov/virt-homeworks/05-virt-03-docker/data:/data --name centos_v.12345 -d rowhe/centos:v.12345
+2e4010cea76360c4ad07d46a29ed7b5e6bf7aad72bc1d242dc6023145a6da959
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/debian$
+```
 - Запустите второй контейнер из образа ***debian*** в фоновом режиме, подключив папку ```/data``` из текущей рабочей директории на хостовой машине в ```/data``` контейнера;
+```shell
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/debian$ sudo docker run --rm -d -it -v /home/dpopov/virt-homeworks/05-virt-03-docker/data:/data --name debian_12345 rowhe/debian:v.12345
+2a6332303d0292521ff787dbd573a295dc0d8ac4a93c34110c2f89f97c74d655
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/debian$
+
+```
 - Подключитесь к первому контейнеру с помощью ```docker exec``` и создайте текстовый файл любого содержания в ```/data```;
 - Добавьте еще один файл в папку ```/data``` на хостовой машине;
 - Подключитесь во второй контейнер и отобразите листинг и содержание файлов в ```/data``` контейнера.
-
+```shell
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker$ sudo docker exec -it centos_v.12345 bash
+[root@d59dd233b6db 05-virt-03-docker]# echo "1234"> /data/added_from_centos.txt
+[root@d59dd233b6db 05-virt-03-docker]# exit
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker$ sudo docker exec -it debian_12345 bash
+root@2a6332303d02:/home/dpopov/virt-homeworks/05-virt-03-docker# echo "1234">/data/added_from_debian.txt
+root@2a6332303d02:/home/dpopov/virt-homeworks/05-virt-03-docker# exit
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker$ echo "1234">data/added_from_host.txt
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker$ ls -al data/
+total 20
+drwxrwxr-x 2 dpopov dpopov 4096 Apr 24 18:05 .
+drwxrwxr-x 8 dpopov dpopov 4096 Apr 24 15:44 ..
+-rw-r--r-- 1 root   root      5 Apr 24 18:04 added_from_centos.txt
+-rw-r--r-- 1 root   root      5 Apr 24 18:05 added_from_debian.txt
+-rw-rw-r-- 1 dpopov dpopov    5 Apr 24 18:05 added_from_host.txt
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker$
+```
 ## Задача 4 (*)
 
 Воспроизвести практическую часть лекции самостоятельно.
 
 Соберите Docker образ с Ansible, загрузите на Docker Hub и пришлите ссылку вместе с остальными ответами к задачам.
+* Ссылка на репозиторий [ansible](https://hub.docker.com/repository/docker/rowhe/ansible) 
+```shell
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/ansible$ sudo docker push rowhe/ansible:v.12345
+The push refers to repository [docker.io/rowhe/ansible]
+4ea269a2ce2c: Pushed
+f7f29e0e4524: Pushed
+b401a928648a: Mounted from library/ubuntu
+v.12345: digest: sha256:398ab894776a7751adad1e2a09e58649fd788ce25966e9174d8a59aa46876a8b size: 949
+
+```
 
 
 ---

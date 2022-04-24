@@ -92,6 +92,12 @@ Hey, Netology
 ```
   * Проверка работы
 ```shell
+dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/ansible$ sudo docker ps
+CONTAINER ID   IMAGE                   COMMAND                  CREATED             STATUS             PORTS                               NAMES
+12ffc48ed796   rowhe/ansible:v.12345   "bash"                   10 minutes ago      Up 10 minutes                                          ansible_12345
+2a6332303d02   rowhe/debian:v.12345    "/bin/bash"              About an hour ago   Up About an hour                                       debian_12345
+d59dd233b6db   rowhe/centos:v.12345    "/usr/sbin/init"         2 hours ago         Up 2 hours                                             centos_v.12345
+4c708c7864b0   rowhe/nginx:1.21.6      "/docker-entrypoint.…"   2 days ago          Up 2 days          0.0.0.0:80->80/tcp, :::80->80/tcp   my_nginx
 dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/nginx$ curl localhost:80
 <html> <head> Hey, Netology </head> <body> <h1>I’m DevOps Engineer!</h1> </body> </html>
 dpopov@dpopov-test:~/virt-homeworks/05-virt-03-docker/nginx$ 

@@ -22,6 +22,7 @@
 <p align="center">
   <img src="img/vm_image.png">
 </p>
+
 * Вывод команды `ansible-playbook`
 ```shell
 dpopov@dpopov-test:~/virt-homeworks/05-virt-04-docker-compose/src/ansible$ ansible-playbook provision.yml

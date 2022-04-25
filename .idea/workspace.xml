@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="Дз 5.4 сделано" />
+    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="Дз 5.4 сделано и исправлено" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650912900899</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Дз 5.4 сделано и исправлено">
+      <created>1650915227700</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1650915227700</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +197,7 @@
     <MESSAGE value="Дз 5.3 сделано и исправлено" />
     <MESSAGE value="Дз 5.3 сделано" />
     <MESSAGE value="Дз 5.4 сделано" />
-    <option name="LAST_COMMIT_MESSAGE" value="Дз 5.4 сделано" />
+    <MESSAGE value="Дз 5.4 сделано и исправлено" />
+    <option name="LAST_COMMIT_MESSAGE" value="Дз 5.4 сделано и исправлено" />
   </component>
 </project>

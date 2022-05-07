@@ -8,7 +8,11 @@
       "image_name": "centos-7-base",
       "source_image_family": "centos-7",
       "ssh_username": "centos",
+<<<<<<< HEAD
       "subnet_id": "e9bbdnir9hoam4vcu40d",
+=======
+      "subnet_id": "e9b85ksg7tsk2dtqliov",
+>>>>>>> 0b8d701 (Added ansible, packer, terraform configuration files)
       "token": "AQAAAAANSgAiAATuwcGbKRGFTUa3jQry6OxDyOY",
       "type": "yandex",
       "use_ipv4_nat": true,

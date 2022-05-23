@@ -9,6 +9,24 @@
 
 Используя docker поднимите инстанс PostgreSQL (версию 12) c 2 volume, 
 в который будут складываться данные БД и бэкапы.
+  * Собираю и запускаю контейнер:
+```shell
+Psql$ sudo docker pull postgres:12-bullseye
+214ca5fb9032: Already exists
+e6930973d723: Pull complete
+...
+Digest: sha256:742e8c57aaa18bf60076b959ea3e7c7aa118a963eca0a0d6b3daefe7bbbc0e8d
+Status: Downloaded newer image for postgres:12-bullseye
+docker.io/library/postgres:12-bullseye
+Psql$
+Psql$ sudo docker run -d --name postgres12 -p 5432:5432 -e POSTGRES_PASSWORD=password -e PGDATA=/var/lib/postgresql/data/pgdata -v /home/dpopov/virt-homeworks/05-virt-03-docker/Psql/base/:/var/lib/postgresql/data -v /home/dpopov/virt-homeworks/05-virt-03-docker/Psql/replica/:/var/lib/postgreslq/backup postgres:12-bullseye
+1ce5d304ae02a352c4fb962e31c8ed99c5905b5f0fdde9ae903ee8d9e426597c
+Psql$
+Psql$ sudo docker container ls
+CONTAINER ID   IMAGE                   COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+1ce5d304ae02   postgres:12-bullseye    "docker-entrypoint.s…"   35 seconds ago   Up 33 seconds   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp   postgres12
+
+```
 
 Приведите получившуюся команду или docker-compose манифест.
 
@@ -37,6 +55,18 @@
 - описание таблиц (describe)
 - SQL-запрос для выдачи списка пользователей с правами над таблицами test_db
 - список пользователей с правами над таблицами test_db
+
+  * Создаю базу данных, пользователей и таблицы:
+```commandline
+create database test_db;
+create user test_admin_user with encrypted password 'password';
+create table orders (id serial primary key, наименование varchar, цена int);
+create table clients (id serial primary key, фамилия varchar, страна varchar, заказ int, foreign key (заказ) references orders (id));
+grant all privileges on database test_db to test_admin_user;
+create user test_sipmle_user with encrypted password 'password';
+grant select,insert,update,delete on table orders to test_sipmle_user;
+grant select,insert,update,delete on table clients to test_sipmle_user;
+```
 
 ## Задача 3
 

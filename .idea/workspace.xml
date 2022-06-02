@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="Дз 5.5 сделано">
+    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 6.2 сделано">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06-db-01-basics/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/06-db-01-basics/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-db-03-mysql/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/06-db-03-mysql/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

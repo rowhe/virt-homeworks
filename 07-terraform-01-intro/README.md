@@ -96,6 +96,7 @@ dpopov@dpopov-test:/usr/local/tf/tf12$
 
 ```
 
+* Также интернет гласит, что для версионности `terraform` можно использовать утилиту [tfenv](https://github.com/tfutils/tfenv)
 ---
 
 ### Как cдавать задание

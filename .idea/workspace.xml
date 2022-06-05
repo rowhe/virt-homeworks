@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 6.2 сделано">
+    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 6.3 сделано">
+      <change afterPath="$PROJECT_DIR$/07-terraform-01-intro/img/terraform_ver.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06-db-03-mysql/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/06-db-03-mysql/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-terraform-01-intro/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/07-terraform-01-intro/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="Python" />
     <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/07-terraform-01-intro/img" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dpopov\PycharmProjects\virt-homeworks\07-terraform-01-intro\img" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="autonomus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -238,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651911304968</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="ДЗ 6.3 сделано">
+      <created>1654184988912</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1654184988912</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,6 +290,7 @@
     <MESSAGE value="Дз 5.4 сделано и исправлено" />
     <MESSAGE value="Дз 5.4 сделано и исправлено2" />
     <MESSAGE value="Дз 5.5 сделано" />
-    <option name="LAST_COMMIT_MESSAGE" value="Дз 5.5 сделано" />
+    <MESSAGE value="ДЗ 6.3 сделано" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 6.3 сделано" />
   </component>
 </project>

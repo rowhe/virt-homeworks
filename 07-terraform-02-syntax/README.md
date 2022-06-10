@@ -10,21 +10,22 @@
 
 AWS предоставляет достаточно много бесплатных ресурсов в первый год после регистрации, подробно описано [здесь](https://aws.amazon.com/free/).
 1. Создайте аккаут aws.
-1. Установите c aws-cli https://aws.amazon.com/cli/.
-1. Выполните первичную настройку aws-sli https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html.
-1. Создайте IAM политику для терраформа c правами
+2. Установите c aws-cli https://aws.amazon.com/cli/.
+3. Выполните первичную настройку aws-sli https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html.
+4. Создайте IAM политику для терраформа c правами
     * AmazonEC2FullAccess
     * AmazonS3FullAccess
     * AmazonDynamoDBFullAccess
     * AmazonRDSFullAccess
     * CloudWatchFullAccess
     * IAMFullAccess
-1. Добавьте переменные окружения 
+5. 
+6. Добавьте переменные окружения 
     ```
     export AWS_ACCESS_KEY_ID=(your access key id)
     export AWS_SECRET_ACCESS_KEY=(your secret access key)
     ```
-1. Создайте, остановите и удалите ec2 инстанс (любой с пометкой `free tier`) через веб интерфейс. 
+7. Создайте, остановите и удалите ec2 инстанс (любой с пометкой `free tier`) через веб интерфейс. 
 
 В виде результата задания приложите вывод команды `aws configure list`.
 
@@ -37,20 +38,48 @@ AWS предоставляет достаточно много бесплатн�
 4. Воспользуйтесь [инструкцией](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs) на сайте терраформа, что бы 
 не указывать авторизационный токен в коде, а терраформ провайдер брал его из переменных окружений.
 
-   * Устанавливаем переменные окружения `TF_VAR_yc_token`  `TF_VAR_yc_cloud_id` `TF_VAR_yc_folder_id` `TF_VAR_yc_zone`
+* Регистрируемся в облаке
+
+![Yandex Cloud](img/yc.png)
+
+
+   * Устанавливаем переменные окружения `TF_VAR_yc_token`  `TF_VAR_yc_cloud_id` `TF_VAR_yc_folder_id` `TF_VAR_yc_region` <br>
+   или `YC_TOKEN` `YC_CLOUD_ID` `YC_FOLDER_ID` `YC_ZONE`
 ```shell
+export TF_VAR_yc_token=b1g68hegds2g8en3ofkasdfsdfsfsfdsdfsdf
+export TF_VAR_yc_cloud_id=b1g68hasdffhgs8en3ofka
+export TF_VAR_yc_folder_id=b1gb32s82d33tgdfag
+export TF_VAR_yc_region=ru-central1-a
 
 ```
 
 ## Задача 2. Создание aws ec2 или yandex_compute_instance через терраформ. 
 
 1. В каталоге `terraform` вашего основного репозитория, который был создан в начале курсе, создайте файл `main.tf` и `versions.tf`.
-2. Зарегистрируйте провайдер 
-   1. для [aws](https://registry.terraform.io/providers/hashicorp/aws/latest/docs). В файл `main.tf` добавьте
-   блок `provider`, а в `versions.tf` блок `terraform` с вложенным блоком `required_providers`. Укажите любой выбранный вами регион 
-   внутри блока `provider`.
-   2. либо для [yandex.cloud](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs). Подробную инструкцию можно найти 
-   [здесь](https://cloud.yandex.ru/docs/solutions/infrastructure-management/terraform-quickstart).
+   1. Зарегистрируйте провайдер 
+      1. для [aws](https://registry.terraform.io/providers/hashicorp/aws/latest/docs). В файл `main.tf` добавьте
+      блок `provider`, а в `versions.tf` блок `terraform` с вложенным блоком `required_providers`. Укажите любой выбранный вами регион 
+      внутри блока `provider`.
+      2. либо для [yandex.cloud](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs). Подробную инструкцию можно найти 
+      [здесь](https://cloud.yandex.ru/docs/solutions/infrastructure-management/terraform-quickstart).
+      * Регистрируем провайдер `yandex`
+      ```shell
+      terraform {
+        required_providers {
+          yandex = {
+            source  = "yandex-cloud/yandex"
+            version = "0.61.0"
+          }
+        }
+      }
+   
+    
+      provider "yandex" {
+        token     = var.yc_token
+        cloud_id  = var.yc_cloud_id
+        zone      = var.yc_region
+      }
+```
 3. Внимание! В гит репозиторий нельзя пушить ваши личные ключи доступа к аккаунту. Поэтому в предыдущем задании мы указывали
 их в виде переменных окружения. 
 4. В файле `main.tf` воспользуйтесь блоком `data "aws_ami` для поиска ami образа последнего Ubuntu.  

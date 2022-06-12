@@ -10,6 +10,10 @@
 
 AWS предоставляет достаточно много бесплатных ресурсов в первый год после регистрации, подробно описано [здесь](https://aws.amazon.com/free/).
 1. Создайте аккаут aws.
+   * К сожалению в данный момент регистрация на AWS затруднительна и задание будет выполнено на примере **Yandex Cloud**
+   
+   ![ASW](img/aws_bounce.png)
+
 2. Установите c aws-cli https://aws.amazon.com/cli/.
 3. Выполните первичную настройку aws-sli https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html.
 4. Создайте IAM политику для терраформа c правами
@@ -19,13 +23,12 @@ AWS предоставляет достаточно много бесплатн�
     * AmazonRDSFullAccess
     * CloudWatchFullAccess
     * IAMFullAccess
-5. 
-6. Добавьте переменные окружения 
+5. Добавьте переменные окружения 
     ```
     export AWS_ACCESS_KEY_ID=(your access key id)
     export AWS_SECRET_ACCESS_KEY=(your secret access key)
     ```
-7. Создайте, остановите и удалите ec2 инстанс (любой с пометкой `free tier`) через веб интерфейс. 
+6. Создайте, остановите и удалите ec2 инстанс (любой с пометкой `free tier`) через веб интерфейс. 
 
 В виде результата задания приложите вывод команды `aws configure list`.
 
@@ -38,56 +41,135 @@ AWS предоставляет достаточно много бесплатн�
 4. Воспользуйтесь [инструкцией](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs) на сайте терраформа, что бы 
 не указывать авторизационный токен в коде, а терраформ провайдер брал его из переменных окружений.
 
-* Регистрируемся в облаке
+   * Регистрируемся в облаке **Yandex Cloud**
 
 ![Yandex Cloud](img/yc.png)
 
 
    * Устанавливаем переменные окружения `TF_VAR_yc_token`  `TF_VAR_yc_cloud_id` `TF_VAR_yc_folder_id` `TF_VAR_yc_region` <br>
-   или `YC_TOKEN` `YC_CLOUD_ID` `YC_FOLDER_ID` `YC_ZONE`
-```shell
-export TF_VAR_yc_token=b1g68hegds2g8en3ofkasdfsdfsfsfdsdfsdf
-export TF_VAR_yc_cloud_id=b1g68hasdffhgs8en3ofka
-export TF_VAR_yc_folder_id=b1gb32s82d33tgdfag
-export TF_VAR_yc_region=ru-central1-a
+   **или** `YC_TOKEN` `YC_CLOUD_ID` `YC_FOLDER_ID` `YC_ZONE` в системе с `terraform`
 
+```shell
+export TF_VAR_yc_token=bla-bla-bla
+export TF_VAR_yc_cloud_id=bla-bla-bla
+export TF_VAR_yc_folder_id=bla-bla-bla
+export TF_VAR_yc_region=ru-central1-a
 ```
 
 ## Задача 2. Создание aws ec2 или yandex_compute_instance через терраформ. 
 
-1. В каталоге `terraform` вашего основного репозитория, который был создан в начале курсе, создайте файл `main.tf` и `versions.tf`.
+1. В каталоге `terraform` вашего основного репозитория, который был создан в начале курсе, создайте файл `main.tf`
+   
+   * создаем каталог `terraform` и необходимые файлы
+   
+   ```shell
+   mkdir terraform && cd terraform
+   touch main.tf  
+      ```
+   * Настраиваем `.terraformrc` 
+   
+   ```shell
+   provider_installation {
+     network_mirror {
+       url = "https://terraform-mirror.yandex.cloud.net"
+       include = ["registry.terraform.io/*/*"]
+     }
+     direct {
+       exclude = ["registry.terraform.io/*/*"]
+     }
+   }
+   ```
+   
    1. Зарегистрируйте провайдер 
       1. для [aws](https://registry.terraform.io/providers/hashicorp/aws/latest/docs). В файл `main.tf` добавьте
       блок `provider`, а в `versions.tf` блок `terraform` с вложенным блоком `required_providers`. Укажите любой выбранный вами регион 
       внутри блока `provider`.
       2. либо для [yandex.cloud](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs). Подробную инструкцию можно найти 
       [здесь](https://cloud.yandex.ru/docs/solutions/infrastructure-management/terraform-quickstart).
-      * Регистрируем провайдер `yandex`
-      ```shell
-      terraform {
-        required_providers {
-          yandex = {
-            source  = "yandex-cloud/yandex"
-            version = "0.61.0"
-          }
-        }
-      }
+      
+      * Регистрируем провайдер `yandex` в файле `main.tf`
+      
+   ```shell
+  terraform {
+     required_providers {
+       yandex = {
+       source = "yandex-cloud/yandex"
+       }
+     }
+  required_version = ">=0.13"
+   }
+   provider "yandex" {
+     token     = var.yc_token
+     cloud_id  = var.yc_cloud_id
+      zone      = var.yc_region
+   }
+   ```
    
-    
-      provider "yandex" {
-        token     = var.yc_token
-        cloud_id  = var.yc_cloud_id
-        zone      = var.yc_region
-      }
-```
+   ```shell
+   
+  ``` 
 3. Внимание! В гит репозиторий нельзя пушить ваши личные ключи доступа к аккаунту. Поэтому в предыдущем задании мы указывали
 их в виде переменных окружения. 
-4. В файле `main.tf` воспользуйтесь блоком `data "aws_ami` для поиска ami образа последнего Ubuntu.  
-5. В файле `main.tf` создайте рессурс 
-   1. либо [ec2 instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance).
-   Постарайтесь указать как можно больше параметров для его определения. Минимальный набор параметров указан в первом блоке 
-   `Example Usage`, но желательно, указать большее количество параметров.
-   2. либо [yandex_compute_image](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/compute_image).
+   1. В файле `main.tf` воспользуйтесь блоком `data "aws_ami` для поиска ami образа последнего Ubuntu.
+   2. В файле `main.tf` создайте ресурс 
+      1. либо [ec2 instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance).
+      Постарайтесь указать как можно больше параметров для его определения. Минимальный набор параметров указан в первом блоке 
+      `Example Usage`, но желательно, указать большее количество параметров.
+      2. либо [yandex_compute_image](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/compute_image).
+      * Описываем свойства `yandex_compute_image`
+   ```shell
+   
+   ```
+   * Запускаем `terraform apply` и проверяем, что образ появился в хранилище
+```shell
+  dpopov@dpopov-test:~/virt-homeworks/07-terraform-02-syntax/terraform$ terraform apply
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # yandex_compute_image.my_image will be created
+  + resource "yandex_compute_image" "my_image" {
+      + created_at      = (known after apply)
+      + folder_id       = "b1gb32s82dickk1qj5v9"
+      + id              = (known after apply)
+      + min_disk_size   = 10
+      + os_type         = (known after apply)
+      + pooled          = (known after apply)
+      + product_ids     = (known after apply)
+      + size            = (known after apply)
+      + source_disk     = (known after apply)
+      + source_family   = "ubuntu-2004-lts"
+      + source_image    = (known after apply)
+      + source_snapshot = (known after apply)
+      + source_url      = (known after apply)
+      + status          = (known after apply)
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+yandex_compute_image.my_image: Creating...
+yandex_compute_image.my_image: Still creating... [10s elapsed]
+yandex_compute_image.my_image: Creation complete after 12s [id=fd81qm2ppom08uk1s313]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+dpopov@dpopov-test:~/virt-homeworks/07-terraform-02-syntax/terraform$ yc compute image list
++----------------------+------+--------+----------------------+--------+
+|          ID          | NAME | FAMILY |     PRODUCT IDS      | STATUS |
++----------------------+------+--------+----------------------+--------+
+| fd81qm2ppom08uk1s313 |      |        | f2e8tnsqjeor74blquqc | READY  |
++----------------------+------+--------+----------------------+--------+
+
+dpopov@dpopov-test:~/virt-homeworks/07-terraform-02-syntax/terraform$
+   ```
+
 6. Также в случае использования aws:
    1. Добавьте data-блоки `aws_caller_identity` и `aws_region`.
    2. В файл `outputs.tf` поместить блоки `output` с данными об используемых в данный момент: 
@@ -110,3 +192,4 @@ export TF_VAR_yc_region=ru-central1-a
 Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
 
 ---
+

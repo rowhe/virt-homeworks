@@ -62,10 +62,10 @@ export TF_VAR_yc_region=ru-central1-a
    
    * создаем каталог `terraform` и необходимые файлы
    
-   ```shell
+```shell
    mkdir terraform && cd terraform
    touch main.tf  
-      ```
+```
    * Настраиваем `.terraformrc` 
    
    ```shell
@@ -89,7 +89,7 @@ export TF_VAR_yc_region=ru-central1-a
       
       * Регистрируем провайдер `yandex` в файле `main.tf`
       
-```shell
+   ```shell
 
     terraform {
      required_providers {
@@ -97,14 +97,14 @@ export TF_VAR_yc_region=ru-central1-a
        source = "yandex-cloud/yandex"
        }
      }
-  required_version = ">=0.13"
-   }
+    required_version = ">=0.13"
+    }
    provider "yandex" {
      token     = var.yc_token
      cloud_id  = var.yc_cloud_id
       zone      = var.yc_region
    }
-```
+   ```
 3. Внимание! В гит репозиторий нельзя пушить ваши личные ключи доступа к аккаунту. Поэтому в предыдущем задании мы указывали
 их в виде переменных окружения. 
    1. В файле `main.tf` воспользуйтесь блоком `data "aws_ami` для поиска ami образа последнего Ubuntu.

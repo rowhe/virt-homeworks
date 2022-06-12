@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-terraform-02-syntax/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/07-terraform-02-syntax/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -309,7 +306,28 @@
       <option name="project" value="LOCAL" />
       <updated>1655058077148</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня">
+      <created>1655058693825</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1655058693825</updated>
+    </task>
+    <task id="LOCAL-00028" summary="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v2">
+      <created>1655058875308</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1655058875308</updated>
+    </task>
+    <task id="LOCAL-00029" summary="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v3">
+      <created>1655058920465</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1655058920465</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -354,6 +372,8 @@
     <MESSAGE value="ДЗ 7,2 сделано" />
     <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано" />
     <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня" />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня" />
+    <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v2" />
+    <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v3" />
   </component>
 </project>

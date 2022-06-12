@@ -89,8 +89,9 @@ export TF_VAR_yc_region=ru-central1-a
       
       * Регистрируем провайдер `yandex` в файле `main.tf`
       
-   ```shell
-  terraform {
+```shell
+
+    terraform {
      required_providers {
        yandex = {
        source = "yandex-cloud/yandex"
@@ -103,11 +104,7 @@ export TF_VAR_yc_region=ru-central1-a
      cloud_id  = var.yc_cloud_id
       zone      = var.yc_region
    }
-   ```
-   
-   ```shell
-   
-  ``` 
+```
 3. Внимание! В гит репозиторий нельзя пушить ваши личные ключи доступа к аккаунту. Поэтому в предыдущем задании мы указывали
 их в виде переменных окружения. 
    1. В файле `main.tf` воспользуйтесь блоком `data "aws_ami` для поиска ami образа последнего Ubuntu.
@@ -118,9 +115,17 @@ export TF_VAR_yc_region=ru-central1-a
       2. либо [yandex_compute_image](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/compute_image).
       * Описываем свойства `yandex_compute_image`
    ```shell
-   
+    resource "yandex_compute_image" "my_image" {
+    description   = "Test image"
+    source_family = "ubuntu-2004-lts"
+    folder_id     = var.yc_folder_id
+    min_disk_size = 10
+    os_type       = "linux"
+    }
+
    ```
    * Запускаем `terraform apply` и проверяем, что образ появился в хранилище
+   
 ```shell
   dpopov@dpopov-test:~/virt-homeworks/07-terraform-02-syntax/terraform$ terraform apply
 
@@ -185,8 +190,63 @@ dpopov@dpopov-test:~/virt-homeworks/07-terraform-02-syntax/terraform$
 1. Ответ на вопрос: при помощи какого инструмента (из разобранных на прошлом занятии) можно создать свой образ ami?
     * Образы для AWS и Yandex Cloud можно создавать при помощи **Packer** от [HashiCorp](https://https://www.packer.io/)
 2. Ссылку на репозиторий с исходной конфигурацией терраформа.
-    * Проверить использованную конфигурацию **Terraform** можно по этой  [Ссылке](https://github.com/rowhe/virt-homeworks/blob/e263723567db9727205a1aee8d2a16b66d79f045/07-terraform-02-syntax/terraform/main.tf)
- 
+    * Проверить использованную конфигурацию **Terraform** можно по этой  [Ссылке](https://github.com/rowhe/virt-homeworks/blob/c1c8d6673496407cbc0164e95349640ed32515cf/07-terraform-02-syntax/terraform/main.tf)
+    * Созданиe, проверка и удаление образа и виртуальной машины
+```shell
+dpopov@dpopov-test:~/virt-homeworks/07-terraform-02-syntax/terraform$ terraform apply
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+...
+yandex_vpc_network.test_network: Creating...
+yandex_compute_image.my_image: Creating...
+yandex_vpc_network.test_network: Creation complete after 1s [id=enppr3fegke2t98ka0qn]
+yandex_vpc_subnet.subnet192: Creating...
+yandex_vpc_subnet.subnet192: Creation complete after 1s [id=e9bcuipfasro8sj04pea]
+yandex_compute_instance.virt_machine: Creating...
+yandex_compute_image.my_image: Creation complete after 6s [id=fd8t5gu9nnecdald6v68]
+yandex_compute_instance.virt_machine: Still creating... [10s elapsed]
+yandex_compute_instance.virt_machine: Still creating... [20s elapsed]
+yandex_compute_instance.virt_machine: Creation complete after 21s [id=fhmg1fs6lbg819djr511]
+
+Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
+       dpopov@dpopov-test:~/virt-homeworks/07-terraform-02-syntax/terraform$ yc compute image list
++----------------------+------+--------+----------------------+--------+
+|          ID          | NAME | FAMILY |     PRODUCT IDS      | STATUS |
++----------------------+------+--------+----------------------+--------+
+| fd8t5gu9nnecdald6v68 |      |        | f2e8tnsqjeor74blquqc | READY  |
++----------------------+------+--------+----------------------+--------+
+
+      dpopov@dpopov-test:~/virt-homeworks/07-terraform-02-syntax/terraform$ yc compute instance list
++----------------------+-----------+---------------+---------+---------------+-------------+
+|          ID          |   NAME    |    ZONE ID    | STATUS  |  EXTERNAL IP  | INTERNAL IP |
++----------------------+-----------+---------------+---------+---------------+-------------+
+| fhmg1fs6lbg819djr511 | banzai-vm | ru-central1-a | RUNNING | 51.250.94.103 | 192.168.0.8 |
++----------------------+-----------+---------------+---------+---------------+-------------+
+
+dpopov@dpopov-test:~/virt-homeworks/07-terraform-02-syntax/terraform$ terraform destroy
+yandex_compute_image.my_image: Refreshing state... [id=fd8t5gu9nnecdald6v68]
+yandex_vpc_network.test_network: Refreshing state... [id=enppr3fegke2t98ka0qn]
+yandex_vpc_subnet.subnet192: Refreshing state... [id=e9bcuipfasro8sj04pea]
+yandex_compute_instance.virt_machine: Refreshing state... [id=fhmg1fs6lbg819djr511]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  - destroy
+...
+
+yandex_compute_image.my_image: Destroying... [id=fd8t5gu9nnecdald6v68]
+yandex_compute_instance.virt_machine: Destroying... [id=fhmg1fs6lbg819djr511]
+yandex_compute_image.my_image: Destruction complete after 5s
+yandex_compute_instance.virt_machine: Still destroying... [id=fhmg1fs6lbg819djr511, 10s elapsed]
+yandex_compute_instance.virt_machine: Destruction complete after 11s
+yandex_vpc_subnet.subnet192: Destroying... [id=e9bcuipfasro8sj04pea]
+yandex_vpc_subnet.subnet192: Destruction complete after 6s
+yandex_vpc_network.test_network: Destroying... [id=enppr3fegke2t98ka0qn]
+yandex_vpc_network.test_network: Destruction complete after 0s
+
+Destroy complete! Resources: 4 destroyed.
+dpopov@dpopov-test:~/virt-homeworks/07-terraform-02-syntax/terraform$
+```
 ---
 
 ### Как cдавать задание

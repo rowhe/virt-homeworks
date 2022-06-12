@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7,2 сделано">
+    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/07-terraform-02-syntax/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/07-terraform-02-syntax/README.md" afterDir="false" />
     </list>
@@ -26,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="DZ_7.2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,11 +42,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1655045171" />
+                    <option name="lastUsedInstant" value="1655051940" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="DZ_7.2" />
-                    <option name="lastUsedInstant" value="1655044897" />
+                    <option name="lastUsedInstant" value="1655051918" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="virt-11" />
@@ -295,7 +295,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655045054002</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="ДЗ 7.2 НАКОНЕЦ_ТО доделано">
+      <created>1655052010369</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1655052010369</updated>
+    </task>
+    <task id="LOCAL-00026" summary="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня">
+      <created>1655058077148</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1655058077148</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -338,6 +352,8 @@
     <MESSAGE value="ДЗ 7.1 доделано" />
     <MESSAGE value="ДЗ 6.4 сделано" />
     <MESSAGE value="ДЗ 7,2 сделано" />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7,2 сделано" />
+    <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано" />
+    <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня" />
   </component>
 </project>

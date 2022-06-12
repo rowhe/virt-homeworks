@@ -198,7 +198,7 @@ dpopov@dpopov-test:~/virt-homeworks/07-terraform-02-syntax/terraform$ terraform 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   + create
   
-  ...
+  ---
   
 yandex_vpc_network.test_network: Creating...
 yandex_compute_image.my_image: Creating...
@@ -235,7 +235,7 @@ yandex_compute_instance.virt_machine: Refreshing state... [id=fhmg1fs6lbg819djr5
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   - destroy
   
-  ...
+  ---
   
 yandex_compute_image.my_image: Destroying... [id=fd8t5gu9nnecdald6v68]
 yandex_compute_instance.virt_machine: Destroying... [id=fhmg1fs6lbg819djr511]

@@ -16,7 +16,11 @@ provider "yandex" {
 
 
 resource "yandex_compute_image" "my_image" {
+  description	= "Test image"
   source_family	= "ubuntu-2004-lts"
   folder_id	= var.yc_folder_id
-  min_disk_size	= 10    
+  min_disk_size	= 10
+  os_type	= "linux"
+
+
 }

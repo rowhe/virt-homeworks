@@ -103,8 +103,9 @@ export TF_VAR_yc_region=ru-central1-a
       zone      = var.yc_region
    }
   ```
-3. Внимание! В гит репозиторий нельзя пушить ваши личные ключи доступа к аккаунту. Поэтому в предыдущем задании мы указывали
-их в виде переменных окружения. 
+
+   3. Внимание! В гит репозиторий нельзя пушить ваши личные ключи доступа к аккаунту. Поэтому в предыдущем задании мы указывали
+   их в виде переменных окружения. 
    1. В файле `main.tf` воспользуйтесь блоком `data "aws_ami` для поиска ami образа последнего Ubuntu.
    2. В файле `main.tf` создайте ресурс 
       1. либо [ec2 instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance).
@@ -120,7 +121,6 @@ export TF_VAR_yc_region=ru-central1-a
     min_disk_size = 10
     os_type       = "linux"
     }
-
    ```
    * Запускаем `terraform apply` и проверяем, что образ появился в хранилище
    

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v3" />
+    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v5">
+      <change beforePath="$PROJECT_DIR$/07-terraform-02-syntax/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/07-terraform-02-syntax/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -327,7 +329,28 @@
       <option name="project" value="LOCAL" />
       <updated>1655058920465</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v4">
+      <created>1655059012072</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1655059012072</updated>
+    </task>
+    <task id="LOCAL-00031" summary="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v4">
+      <created>1655059133083</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1655059133083</updated>
+    </task>
+    <task id="LOCAL-00032" summary="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v5">
+      <created>1655059192103</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1655059192103</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -374,6 +397,8 @@
     <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня" />
     <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v2" />
     <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v3" />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v3" />
+    <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v4" />
+    <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v5" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v5" />
   </component>
 </project>

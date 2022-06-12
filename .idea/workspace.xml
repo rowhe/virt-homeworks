@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7,2 сделано">
-      <change afterPath="$PROJECT_DIR$/07-terraform-02-syntax/img/yc.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/07-terraform-02-syntax/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/07-terraform-02-syntax/README.md" afterDir="false" />
     </list>
@@ -27,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="virt-11" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,16 +41,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1655045171" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="DZ_7.2" />
-                    <option name="lastUsedInstant" value="1654873069" />
+                    <option name="lastUsedInstant" value="1655044897" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="virt-11" />
                     <option name="lastUsedInstant" value="1650483037" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1650381127" />
                   </RecentBranch>
                 </list>
               </option>
@@ -112,6 +111,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.autonomus" />
         <item itemvalue="Python.autonomus" />
         <item itemvalue="Python.autonomus" />
         <item itemvalue="Python.autonomus" />
@@ -288,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654873266993</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="ДЗ 7,2 сделано">
+      <created>1655045054002</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1655045054002</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

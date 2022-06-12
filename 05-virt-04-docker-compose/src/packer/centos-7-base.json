@@ -1,0 +1,31 @@
+{
+  "builders": [
+    {
+      "disk_type": "network-nvme",
+      "folder_id": "b1gb32s82dickk1qj5v9",
+      "image_description": "by packer",
+      "image_family": "centos",
+      "image_name": "centos-7-base",
+      "source_image_family": "centos-7",
+      "ssh_username": "centos",
+<<<<<<< HEAD
+      "subnet_id": "e9bbdnir9hoam4vcu40d",
+=======
+      "subnet_id": "e9b85ksg7tsk2dtqliov",
+>>>>>>> 0b8d701 (Added ansible, packer, terraform configuration files)
+      "token": "AQAAAAANSgAiAATuwcGbKRGFTUa3jQry6OxDyOY",
+      "type": "yandex",
+      "use_ipv4_nat": true,
+      "zone": "ru-central1-a"
+    }
+  ],
+  "provisioners": [
+    {
+      "inline": [
+        "sudo yum -y update",
+        "sudo yum -y install bridge-utils bind-utils iptables curl net-tools tcpdump rsync telnet openssh-server"
+      ],
+      "type": "shell"
+    }
+  ]
+}

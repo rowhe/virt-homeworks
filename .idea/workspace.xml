@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7,2 сделано">
+      <change afterPath="$PROJECT_DIR$/07-terraform-02-syntax/img/yc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-terraform-02-syntax/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/07-terraform-02-syntax/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="master" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="virt-11" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="4" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="DZ_7.2" />
+                    <option name="lastUsedInstant" value="1654873069" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="virt-11" />
+                    <option name="lastUsedInstant" value="1650483037" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1650381127" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27z2EldH77G9RZ51Ik34nvpKB72" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="Python" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/07-terraform-01-intro/img" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dpopov\PycharmProjects\virt-homeworks\07-terraform-01-intro\img" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="autonomus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\dpopov\AppData\Local\Programs\Python\Python310\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/05-virt-04-docker-compose/src/packer" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/05-virt-04-docker-compose/src/packer/autonomus.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.autonomus" />
+        <item itemvalue="Python.autonomus" />
+        <item itemvalue="Python.autonomus" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="" />
+      <created>1650308485012</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650308485012</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Дз 5.3 начало">
+      <created>1650381403891</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650381403891</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Дз 5.3 начало">
+      <created>1650483150110</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650483150110</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Дз 5.3 начало">
+      <created>1650642081099</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650642081099</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Дз 5.3 начало">
+      <created>1650647449491</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650647449491</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Дз 5.3 начало">
+      <created>1650647472297</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1650647472297</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Дз 5.3 сделано">
+      <created>1650828214022</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1650828214022</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Дз 5.3 сделано">
+      <created>1650828628359</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1650828628359</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Дз 5.3 сделано">
+      <created>1650828652969</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1650828652969</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Дз 5.3 сделано">
+      <created>1650828678675</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1650828678675</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Дз 5.4 сделано">
+      <created>1650912900899</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1650912900899</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Дз 5.4 сделано и исправлено">
+      <created>1650915227700</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1650915227700</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Дз 5.4 сделано и исправлено">
+      <created>1650915338597</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1650915338597</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Дз 5.4 сделано и исправлено">
+      <created>1650915350816</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1650915350816</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Дз 5.4 сделано и исправлено2">
+      <created>1650915491294</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1650915491294</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Дз 5.4 сделано и исправлено2">
+      <created>1651911115304</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1651911115304</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Дз 5.4 сделано и исправлено2">
+      <created>1651911237328</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1651911237328</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Дз 5.4 сделано и исправлено2">
+      <created>1651911274917</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1651911274917</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Дз 5.5 сделано">
+      <created>1651911304968</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1651911304968</updated>
+    </task>
+    <task id="LOCAL-00019" summary="ДЗ 6.3 сделано">
+      <created>1654184988912</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1654184988912</updated>
+    </task>
+    <task id="LOCAL-00020" summary="ДЗ 7.1 сделано">
+      <created>1654433404954</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1654433404954</updated>
+    </task>
+    <task id="LOCAL-00021" summary="ДЗ 7.1 доделано">
+      <created>1654433667868</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1654433667868</updated>
+    </task>
+    <task id="LOCAL-00022" summary="ДЗ 6.4 сделано">
+      <created>1654708702150</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1654708702150</updated>
+    </task>
+    <task id="LOCAL-00023" summary="ДЗ 7,2 сделано">
+      <created>1654873266993</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1654873266993</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="virt-11" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Дз 5.3 середина" />
+    <MESSAGE value="Дз 5.3 начало" />
+    <MESSAGE value="Дз 5.3 сделано и исправлено" />
+    <MESSAGE value="Дз 5.3 сделано" />
+    <MESSAGE value="Дз 5.4 сделано" />
+    <MESSAGE value="Дз 5.4 сделано и исправлено" />
+    <MESSAGE value="Дз 5.4 сделано и исправлено2" />
+    <MESSAGE value="Дз 5.5 сделано" />
+    <MESSAGE value="ДЗ 6.3 сделано" />
+    <MESSAGE value="ДЗ 7.1 сделано" />
+    <MESSAGE value="ДЗ 7.1 доделано" />
+    <MESSAGE value="ДЗ 6.4 сделано" />
+    <MESSAGE value="ДЗ 7,2 сделано" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7,2 сделано" />
+  </component>
+</project>

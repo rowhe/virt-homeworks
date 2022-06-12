@@ -183,7 +183,9 @@ dpopov@dpopov-test:~/virt-homeworks/07-terraform-02-syntax/terraform$
 
 В качестве результата задания предоставьте:
 1. Ответ на вопрос: при помощи какого инструмента (из разобранных на прошлом занятии) можно создать свой образ ami?
-1. Ссылку на репозиторий с исходной конфигурацией терраформа.  
+    * Образы для AWS и Yandex Cloud можно создавать при помощи **Packer** от [HashiCorp](https://https://www.packer.io/)
+2. Ссылку на репозиторий с исходной конфигурацией терраформа.
+    * Проверить использованную конфигурацию **Terraform** можно по этой  [Ссылке](https://github.com/rowhe/virt-homeworks/blob/e263723567db9727205a1aee8d2a16b66d79f045/07-terraform-02-syntax/terraform/main.tf)
  
 ---
 
@@ -192,4 +194,5 @@ dpopov@dpopov-test:~/virt-homeworks/07-terraform-02-syntax/terraform$
 Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
 
 ---
+
 

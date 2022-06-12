@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+    }
+  }
+  required_version = ">= 0.13"
+}
+
 provider "yandex" {
   token		= var.yc_token
   cloud_id	= var.yc_cloud_id
@@ -6,10 +15,8 @@ provider "yandex" {
 }
 
 
-resource "yandex_compute_image" "ubuntu-2004-test-image" {
-  name = "ubuntu_test_image"
-  description = "ubuntu test image"
-  source_image = "fd800n45ob5uggkrooi8"
-  family	= "linux"
-  min_disk
+resource "yandex_compute_image" "my_image" {
+  source_family	= "ubuntu-2004-lts"
+  folder_id	= var.yc_folder_id
+  min_disk_size	= 10    
 }

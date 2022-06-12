@@ -21,6 +21,40 @@ resource "yandex_compute_image" "my_image" {
   folder_id	= var.yc_folder_id
   min_disk_size	= 10
   os_type	= "linux"
+}
 
 
+resource "yandex_compute_instance" "virt_machine" {
+  name = "banzai-vm"
+  zone = "ru-central1-a"
+
+  resources {
+    cores  = 4
+    memory = 8
+  }
+
+  boot_disk {
+    initialize_params {
+      image_id	= "fd80viupr3qjr5g6g9du"
+      size	= 50
+    }
+  }
+
+  network_interface {
+    subnet_id = yandex_vpc_subnet.subnet192.id
+    nat       = true
+  }
+
+  metadata = {
+    ssh-keys = "${file("~/.ssh/id_rsa.pub")}"
+  }
+}
+resource "yandex_vpc_network" "test_network" {
+  name = "test-net"
+}
+
+resource "yandex_vpc_subnet" "subnet192" {
+  v4_cidr_blocks = ["192.168.0.0/16"]
+  zone           = "ru-central1-a"
+  network_id     = "${yandex_vpc_network.test_network.id}"
 }

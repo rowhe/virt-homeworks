@@ -802,7 +802,7 @@ Plan: 12 to add, 0 to change, 0 to destroy.
 Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
 dpopov@dpopov-test:~/virt-homeworks/07-terraform-03-basic/terraform$
 ```
-   * Окончательный вариант [main.tf]() для задания 7.2
+   * Окончательный вариант [main.tf](https://github.com/rowhe/virt-homeworks/blob/1489538b5a8ca06453ee7073c945892ce5aaeb08/07-terraform-03-basic/terraform/main.tf) для задания 7.2
 ---
 
 ### Как cдавать задание

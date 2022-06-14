@@ -59,6 +59,44 @@ resource "yandex_compute_instance" "virt_machine" {
   count 	= local.instance[terraform.workspace]
 }
 
+
+locals {
+  id = toset([
+  "0",
+  "1",
+  "2",
+  ])
+}
+
+
+resource "yandex_compute_instance" "maschina" {
+
+  for_each	= local.id
+  name		= "mama-${each.key}-${terraform.workspace}"
+  
+  lifecycle {
+    create_before_destroy = true
+  }
+  
+  resources {
+    cores	= 2
+    memory	= 4
+  }
+  
+  boot_disk {
+    initialize_params {
+      image_id	= "${yandex_compute_image.my_image.id}"
+    }
+  }
+
+  network_interface {
+    subnet_id	= yandex_vpc_subnet.subnet192.id
+    nat		= true
+  }
+}
+  
+
+
 resource "yandex_vpc_network" "test_network" {
   name = "test-net"
 }

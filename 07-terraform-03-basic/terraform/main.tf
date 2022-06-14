@@ -24,8 +24,16 @@ resource "yandex_compute_image" "my_image" {
 }
 
 
+locals {
+  instance = {
+    default	= 0
+    prod	= 2
+    stage	= 1
+  }
+}
+
 resource "yandex_compute_instance" "virt_machine" {
-  name = "banzai-vm"
+  name = "banzai-vm-${count.index}-${terraform.workspace}"
   zone = "ru-central1-a"
 
   resources {
@@ -35,7 +43,7 @@ resource "yandex_compute_instance" "virt_machine" {
 
   boot_disk {
     initialize_params {
-      image_id	= "fd80viupr3qjr5g6g9du"
+      image_id	= "${yandex_compute_image.my_image.id}"
       size	= 50
     }
   }
@@ -48,7 +56,9 @@ resource "yandex_compute_instance" "virt_machine" {
   metadata = {
     ssh-keys = "${file("~/.ssh/id_rsa.pub")}"
   }
+  count 	= local.instance[terraform.workspace]
 }
+
 resource "yandex_vpc_network" "test_network" {
   name = "test-net"
 }
@@ -58,11 +68,6 @@ resource "yandex_vpc_subnet" "subnet192" {
   zone           = "ru-central1-a"
   network_id     = "${yandex_vpc_network.test_network.id}"
 }
-
-
-//locals {
-//  folder_id = "${var.yc_folder_id}"
-//}
 
 
 // Create SA
@@ -88,5 +93,5 @@ resource "yandex_iam_service_account_static_access_key" "sa-static-key" {
 resource "yandex_storage_bucket" "stage732-1235gwosn" {
   access_key = yandex_iam_service_account_static_access_key.sa-static-key.access_key
   secret_key = yandex_iam_service_account_static_access_key.sa-static-key.secret_key
-  bucket = "stage732-1235gwosn"
+  bucket = "bigbucket"
 }

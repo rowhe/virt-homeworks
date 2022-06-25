@@ -120,6 +120,27 @@ dpopov@dpopov-test:~$
 В ответе приведите:
 - текст Dockerfile манифеста
 - ссылку на образ в репозитории dockerhub
+
+  * Сделать `docker push` для собранного образа не удается
+```shell
+dpopov@dpopov-test:~/virt-homeworks/06-db-05-elasticsearch$ sudo docker login
+Authenticating with existing credentials...
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+dpopov@dpopov-test:~/virt-homeworks/06-db-05-elasticsearch$ sudo docker push rowhe:es7
+The push refers to repository [docker.io/library/rowhe]
+382a284400d3: Preparing
+930cdaf1ad56: Preparing
+8874d812d92f: Preparing
+a790f937a6ae: Preparing
+denied: requested access to the resource is denied
+
+```
+
+
 - ответ `elasticsearch` на запрос пути `/` в json виде
 
 Подсказки:

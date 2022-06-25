@@ -1,0 +1,4 @@
+hode.name: "netology_test"
+path:
+  data: /var/lib/elasticsearch
+  logs: /var/lib/elasticsearch

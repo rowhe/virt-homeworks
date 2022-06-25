@@ -10,7 +10,67 @@
 Используя докер образ [elasticsearch:7](https://hub.docker.com/_/elasticsearch) как базовый:
 
 - составьте Dockerfile-манифест для elasticsearch
+    * Файл `Dockerfile` может выглядеть следующим образом:
+```shell
+FROM ubuntu:14.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+    apt-get install -y software-properties-common && \
+    apt-get install -y curl
+
+RUN sudo add-apt-repository ppa:openjdk-r/ppa && \
+sudo apt-get update &&\
+sudo apt-get install --no-install-recommends -y openjdk-8-jre && \
+sudo rm -rf /var/cache/openjdk-8-jre
+
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+
+RUN groupadd -g 1000 elasticsearch && useradd elasticsearch -u 1000 -g 1000
+
+
+
+RUN sudo curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add - && \
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list && \
+sudo apt update && \
+sudo apt install -y --no-install-recommends elasticsearch
+
+#RUN apt-key adv -keyserver pgp.mit.edu --recv-keys 46095ACC8548582C1A2699A9D27D666CD88E42B4 &&\
+#       add-apt-repository -y "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" --keyserver https://pgp.mit.edu/ &&\
+#       apt-get update &&\
+#       apt-get install -y --no-install-recommends elasticsearch
+
+RUN     rm -rf /var/lib/apt/lists/*
+
+WORKDIR /usr/share/elasticsearch
+
+RUN set -ex && for path in data logs config config/scripts; do \
+        mkdir -p "$path"; \
+        chown -R elasticsearch:elasticsearch "$path";\
+  done
+
+COPY    logging.yml /usr/share/elasticsearch/config/
+COPY    elasticsearch.yml /usr/share/elasticsearch/config/
+
+USER    elasticsearch
+ENV     PATH=$PATH:/usr/share/elasticsearch/bin
+CMD     ["elasticsearch"]
+EXPOSE  9200 9300
+```
 - соберите docker-образ и сделайте `push` в ваш docker.io репозиторий
+  * Собираю образ
+```shell
+dpopov@dpopov-test:$sudo docker build -t rowhe:es7 .
+Sending build context to Docker daemon   1.78MB
+Step 1/16 : FROM ubuntu:14.04
+14.04: Pulling from library/ubuntu
+2e6e20c8e2e6: Extracting [=====================>                             ]  30.08MB/70.69MB
+0551a797c01d: Download complete
+512123a864da: Download complete
+...
+
+```
 - запустите контейнер из получившегося образа и выполните запрос пути `/` c хост-машины
 
 Требования к `elasticsearch.yml`:

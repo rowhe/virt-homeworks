@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v7">
+    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7.3 завершено">
+      <change afterPath="$PROJECT_DIR$/07-terraform-04-teamwork/img/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-terraform-03-basic/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/07-terraform-03-basic/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-db-05-elasticsearch/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/06-db-05-elasticsearch/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-terraform-04-teamwork/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/07-terraform-04-teamwork/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,11 +82,22 @@
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="Python" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/07-terraform-01-intro/img" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="virt-homeworks" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="virt-homeworks" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dpopov\PycharmProjects\virt-homeworks\07-terraform-01-intro\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dpopov\PycharmProjects\virt-homeworks\07-terraform-04-teamwork\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -365,7 +378,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655059326387</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="ДЗ 7.3 завершено">
+      <created>1655238626928</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1655238626928</updated>
+    </task>
+    <task id="LOCAL-00036" summary="ДЗ 7.3 завершено">
+      <created>1655238890377</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1655238890377</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -415,6 +442,7 @@
     <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v4" />
     <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v5" />
     <MESSAGE value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v7" />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7.2 НАКОНЕЦ_ТО доделано да чтоб меня v7" />
+    <MESSAGE value="ДЗ 7.3 завершено" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7.3 завершено" />
   </component>
 </project>

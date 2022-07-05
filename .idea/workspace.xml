@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7.4 начало">
-      <change afterPath="$PROJECT_DIR$/07-terraform-05-golang/img/img.png" afterDir="false" />
+    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7.5 сделано">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-terraform-05-golang/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/07-terraform-05-golang/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-db-06-troobleshooting/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/06-db-06-troobleshooting/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -426,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656528229559</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="ДЗ 7.5 сделано">
+      <created>1656953435315</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1656953435316</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -479,6 +485,7 @@
     <MESSAGE value="ДЗ 7.3 завершено" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="ДЗ 7.4 начало" />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7.4 начало" />
+    <MESSAGE value="ДЗ 7.5 сделано" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7.5 сделано" />
   </component>
 </project>

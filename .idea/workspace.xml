@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7.5 сделано">
+    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 6.6 сделано">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06-db-06-troobleshooting/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/06-db-06-troobleshooting/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-terraform-06-providers/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/07-terraform-06-providers/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -432,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656953435316</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="ДЗ 6.6 сделано">
+      <created>1657032671644</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1657032671644</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -486,6 +493,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="ДЗ 7.4 начало" />
     <MESSAGE value="ДЗ 7.5 сделано" />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7.5 сделано" />
+    <MESSAGE value="ДЗ 6.6 сделано" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 6.6 сделано" />
   </component>
 </project>

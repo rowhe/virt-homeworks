@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 6.6 сделано">
+    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7.6 сделано">
+      <change afterPath="$USER_HOME$/Documents/GitHub/mnt-hwk/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/GitHub/mnt-hwk/.idea/mnt-hwk.iml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/GitHub/mnt-hwk/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/GitHub/mnt-hwk/playbook/README.md" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/GitHub/mnt-hwk/playbook/group_vars/all/examp.yml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/GitHub/mnt-hwk/playbook/group_vars/deb/examp.yml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/GitHub/mnt-hwk/playbook/group_vars/el/examp.yml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/GitHub/mnt-hwk/playbook/inventory/prod.yml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/GitHub/mnt-hwk/playbook/inventory/test.yml" afterDir="false" />
+      <change afterPath="$USER_HOME$/Documents/GitHub/mnt-hwk/playbook/site.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/Documents/GitHub/mnt-homeworks/08-ansible-01-base/README.md" beforeDir="false" afterPath="$USER_HOME$/Documents/GitHub/mnt-homeworks/08-ansible-01-base/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/virt-homeworks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/virt-homeworks.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-terraform-06-providers/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/07-terraform-06-providers/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +43,10 @@
         <entry key="$PROJECT_DIR$" value="DZ_7.2" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Documents/GitHub/mnt-hwk" />
   </component>
   <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="4" />
+    <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -65,7 +79,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="27z2EldH77G9RZ51Ik34nvpKB72" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -77,10 +91,11 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="Python" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/07-terraform-01-intro/img" />
-    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/mnt-hwk" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -439,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657032671644</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="ДЗ 7.6 сделано">
+      <created>1657123955339</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1657123955339</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -469,7 +491,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Дз 5.3 середина" />
     <MESSAGE value="Дз 5.3 начало" />
     <MESSAGE value="Дз 5.3 сделано и исправлено" />
     <MESSAGE value="Дз 5.3 сделано" />
@@ -494,6 +515,7 @@
     <MESSAGE value="ДЗ 7.4 начало" />
     <MESSAGE value="ДЗ 7.5 сделано" />
     <MESSAGE value="ДЗ 6.6 сделано" />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 6.6 сделано" />
+    <MESSAGE value="ДЗ 7.6 сделано" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7.6 сделано" />
   </component>
 </project>

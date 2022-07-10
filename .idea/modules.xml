@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/Documents/GitHub/mnt-homeworks/.idea/mnt-homeworks.iml" filepath="$USER_HOME$/Documents/GitHub/mnt-homeworks/.idea/mnt-homeworks.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/GitHub/mnt-hwk/.idea/mnt-hwk.iml" filepath="$USER_HOME$/Documents/GitHub/mnt-hwk/.idea/mnt-hwk.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/virt-homeworks.iml" filepath="$PROJECT_DIR$/.idea/virt-homeworks.iml" />
     </modules>
   </component>

@@ -39,9 +39,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7.6 сделано">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b6bf15be-6623-4b00-a574-62ab5bedfb19" name="Changes" comment="ДЗ 7.6 сделано" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,7 +182,7 @@
       <option name="presentableId" value="Default" />
       <updated>1650308485012</updated>
       <workItem from="1661151421574" duration="612000" />
-      <workItem from="1661332430156" duration="624000" />
+      <workItem from="1661332430156" duration="1021000" />
     </task>
     <task id="LOCAL-00001" summary="Дз 5.3 начало">
       <created>1650381403891</created>
@@ -494,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657123955339</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="ДЗ 7.4 Завершено">
+      <created>1661335538946</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1661335538946</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,7 +533,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Дз 5.3 начало" />
     <MESSAGE value="Дз 5.3 сделано и исправлено" />
     <MESSAGE value="Дз 5.3 сделано" />
     <MESSAGE value="Дз 5.4 сделано" />
@@ -553,6 +557,7 @@
     <MESSAGE value="ДЗ 7.5 сделано" />
     <MESSAGE value="ДЗ 6.6 сделано" />
     <MESSAGE value="ДЗ 7.6 сделано" />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7.6 сделано" />
+    <MESSAGE value="ДЗ 7.4 Завершено" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 7.4 Завершено" />
   </component>
 </project>

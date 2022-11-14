@@ -32,8 +32,8 @@ locals {
   }
 }
 
-resource "yandex_compute_instance" "virt_machine" {
-  name = "banzai-vm-${count.index}-${terraform.workspace}"
+resource "yandex_compute_instance" "master" {
+  name = "cp-vm-${count.index}-${terraform.workspace}"
   zone = "ru-central1-a"
 
   resources {
@@ -44,18 +44,26 @@ resource "yandex_compute_instance" "virt_machine" {
   boot_disk {
     initialize_params {
       image_id	= "${yandex_compute_image.my_image.id}"
-      size	= 50
+      size	= 30
     }
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.subnet192.id
+    subnet_id = yandex_vpc_subnet.subnet10.id
     nat       = true
   }
 
   metadata = {
-    ssh-keys = "${file("~/.ssh/id_rsa.pub")}"
+    ssh-keys = "${var.ssh_user}:${file("~/.ssh/id_rsa.pub")}"
   }
+
+#  connection {
+#      type        = "ssh"
+#      host        = self.public_ip
+#      user        = "dpopov"
+#      private_key = file("~/.ssh/id_rsa")
+#      timeout     = "4m"
+#   }
   count 	= local.instance[terraform.workspace]
 }
 
@@ -69,10 +77,10 @@ locals {
 }
 
 
-resource "yandex_compute_instance" "maschina" {
+resource "yandex_compute_instance" "node" {
 
   for_each	= local.id
-  name		= "mama-${each.key}-${terraform.workspace}"
+  name		= "node-${each.key}-${terraform.workspace}"
   
   lifecycle {
     create_before_destroy = true
@@ -86,23 +94,28 @@ resource "yandex_compute_instance" "maschina" {
   boot_disk {
     initialize_params {
       image_id	= "${yandex_compute_image.my_image.id}"
+      size = 50
     }
   }
 
   network_interface {
-    subnet_id	= yandex_vpc_subnet.subnet192.id
+    subnet_id	= yandex_vpc_subnet.subnet10.id
     nat		= true
   }
+  
+  metadata = {
+    ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
+  }
+
 }
   
-
 
 resource "yandex_vpc_network" "test_network" {
   name = "test-net"
 }
 
-resource "yandex_vpc_subnet" "subnet192" {
-  v4_cidr_blocks = ["192.168.0.0/16"]
+resource "yandex_vpc_subnet" "subnet10" {
+  v4_cidr_blocks = ["10.0.0.0/16"]
   zone           = "ru-central1-a"
   network_id     = "${yandex_vpc_network.test_network.id}"
 }

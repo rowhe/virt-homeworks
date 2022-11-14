@@ -11,5 +11,9 @@ variable "yc_folder_id" {
 }
 
 variable "yc_region" {
-  default = "ru-central1-a"
+  default = ""
+}
+
+variable "ssh_user" {
+  default = ""
 }

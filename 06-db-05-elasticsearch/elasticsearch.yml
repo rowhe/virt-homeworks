@@ -1,4 +1,14 @@
-hode.name: "netology_test"
+node.name: "netology_test"
+node.master: true
+node.data: true
+
 path:
-  data: /var/lib/elasticsearch
-  logs: /var/lib/elasticsearch
+  data: /var/lib/elasticsearch/data
+  logs: /var/lib/elasticsearch/logs
+  repo:
+    - /usr/share/elasticsearch/snapshots
+cluster.name: "netology_cluster"
+network.host: 0.0.0.0
+discovery.seed_hosts:
+  - 0.0.0.0:9300
+discovery.type: single-node

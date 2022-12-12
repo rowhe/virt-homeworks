@@ -109,7 +109,7 @@ Terraform will perform the following actions:
   # yandex_iam_service_account.sa will be created
   + resource "yandex_iam_service_account" "sa" {
       + created_at = (known after apply)
-      + folder_id  = "b1gb32s82dickk1qj5v9"
+      + folder_id  = ""
       + id         = (known after apply)
       + name       = "tf-test-sa"
     }
@@ -128,7 +128,7 @@ Terraform will perform the following actions:
 
   # yandex_resourcemanager_folder_iam_member.sa-editor will be created
   + resource "yandex_resourcemanager_folder_iam_member" "sa-editor" {
-      + folder_id = "b1gb32s82dickk1qj5v9"
+      + folder_id = ""
       + id        = (known after apply)
       + member    = (known after apply)
       + role      = "storage.editor"
@@ -246,19 +246,19 @@ dpopov@dpopov-test:~/virt-homeworks/07-terraform-03-basic/terraform$ terraform s
 # yandex_iam_service_account.sa:
 resource "yandex_iam_service_account" "sa" {
     created_at = "2022-06-14T18:14:36Z"
-    folder_id  = "b1gb32s82dickk1qj5v9"
-    id         = "ajeitaq022spksp2cuap"
+    folder_id  = ""
+    id         = ""
     name       = "tf-test-sa"
 }
 dpopov@dpopov-test:~/virt-homeworks/07-terraform-03-basic/terraform$ terraform state show yandex_storage_bucket.stage732-1235gwosn
 # yandex_storage_bucket.stage732-1235gwosn:
 resource "yandex_storage_bucket" "stage732-1235gwosn" {
-    access_key            = "YCAJE_KcdBnNkUFRkB6XKRFxu"
+    access_key            = ""
     acl                   = "private"
     bucket                = "stage732-1235gwosn"
     bucket_domain_name    = "stage732-1235gwosn.storage.yandexcloud.net"
     default_storage_class = "STANDARD"
-    folder_id             = "b1gb32s82dickk1qj5v9"
+    folder_id             = ""
     force_destroy         = false
     id                    = "stage732-1235gwosn"
     max_size              = 0
@@ -387,7 +387,7 @@ Terraform will perform the following actions:
   + resource "yandex_compute_image" "my_image" {
       + created_at      = (known after apply)
       + description     = "Test image"
-      + folder_id       = "b1gb32s82dickk1qj5v9"
+      + folder_id       = ""
       + id              = (known after apply)
       + min_disk_size   = 10
       + os_type         = "linux"
@@ -739,7 +739,7 @@ Terraform will perform the following actions:
 
   # yandex_resourcemanager_folder_iam_member.sa-editor will be created
   + resource "yandex_resourcemanager_folder_iam_member" "sa-editor" {
-      + folder_id = "b1gb32s82dickk1qj5v9"
+      + folder_id = ""
       + id        = (known after apply)
       + member    = (known after apply)
       + role      = "storage.editor"
